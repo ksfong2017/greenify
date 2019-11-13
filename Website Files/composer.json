@@ -1,0 +1,7 @@
+{
+    "require": {
+        "google/cloud-vision": "^0.24.0",
+        "clarifai/clarifai-php": "^0.6.2",
+        "cloudinary/cloudinary_php": "^1.15"
+    }
+}

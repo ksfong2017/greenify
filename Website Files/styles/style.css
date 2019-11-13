@@ -1,0 +1,771 @@
+.jumbotron {
+  background-image: url("../images/green.jpg");
+}
+
+.jumbo-text {
+  color: white;
+  border-color: white;
+}
+
+.index-card {
+  height: 200px;
+  object-fit: cover;
+}
+
+.bottom-container {
+  color: #f3f3f3;
+  padding-bottom: 60px;
+}
+.mb {
+  background-color: transparent;
+  position: fixed;
+  z-index: 999999999;
+  width: 100%;
+  transition: all 0.4s ease;
+  -webkit-animation: fade 4s infinite;
+  animation: fade 4s infinite;
+  top: 0;
+}
+.menubar {
+  left: 0;
+  right: 0;
+}
+.down {
+  background-color: #f3f3f3;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+}
+.my-footer {
+  width: 100%;
+  background-color: green;
+  color: white;
+}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+.base {
+  background-color: white;
+}
+
+.jumbotron {
+  border-radius: 0;
+}
+
+.screen-behind {
+  width: 100%;
+  height: 480px;
+  background-color: black;
+}
+
+.logo-title {
+  padding-top: 7px;
+  padding-left: 5px;
+}
+
+.navbar-brand > * {
+  float: left;
+}
+
+header {
+  position: relative;
+
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  width: 100vw; /* Could also use width: 100%; */
+  height: 100vh;
+  object-fit: cover;
+  position: absolute; /* Change position to absolute if you don't want it to take up the whole page */
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  opacity: 0.5;
+  z-index: 1;
+}
+
+#content {
+  position: absolute;
+  height: 50px;
+  width: 300px;
+  margin-left: 170px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#content.on {
+  -webkit-animation-name: in-out;
+  animation-name: in-out;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+#search-input {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Roboto;
+  outline: 0;
+  -webkit-transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
+  transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  -webkit-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+
+.search {
+  background: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 100%;
+  outline: 0;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+
+.search:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-top: 26px;
+  margin-left: 17px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.close {
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.close:before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 4px;
+  margin-top: -1px;
+  margin-left: -13px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.close:after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 4px;
+  background-color: #fff;
+  margin-top: -1px;
+  margin-left: -13px;
+  cursor: pointer;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.square {
+  box-sizing: border-box;
+  padding: 0 40px 0 10px;
+  width: 300px;
+  height: 50px;
+  border: 4px solid #ffffff;
+  border-radius: 0;
+  background: none;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  outline: 0;
+  -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s;
+  transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s;
+  -webkit-transition-delay: 0.4s, 0s, 0.4s;
+  transition-delay: 0.4s, 0s, 0.4s;
+  -webkit-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+
+#search-label {
+  padding-right: 10px;
+}
+#myInputSearch {
+  box-shadow: none;
+  border-radius: 0 !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: 0;
+  font-size: 2.5rem;
+  border: 0px;
+  color: white;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  margin-bottom: 25px;
+  width: 180px;
+  padding: 0;
+  padding-top: 15px;
+}
+#text-changing {
+  font-size: 3rem;
+  padding-right: 10px;
+  min-width: 180px;
+}
+.form-inline {
+  display: inline-flex;
+}
+
+div#myInputSearchautocomplete-list {
+  margin-top: -25px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  color: black;
+}
+.autocomplete-items > div {
+  display: none;
+}
+
+.autocomplete-items > div:nth-child(-n + 4) {
+  display: block;
+}
+.pt-custom {
+  padding-top: 60px;
+}
+.pt-custom2 {
+  padding-top: 40px;
+}
+.pt-custom3 {
+  padding-top: 20px;
+}
+
+.counter-col {
+  text-align: center;
+  padding-bottom: 30px;
+  border-right: 1px solid black !important;
+  border-bottom: 0px !important;
+}
+
+.counter-col:last-child {
+  border-right: 0px solid black !important;
+  border-bottom: 0px !important;
+}
+
+.counter {
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+i {
+  font-size: 20px !important;
+}
+.btn-success {
+  visibility: hidden;
+}
+
+@media (max-width: 991px) {
+  .m-tabs {
+    width: 100% !important;
+  }
+  .col-md-4 {
+    border-right: 0px dashed black;
+    border-bottom: 1px dashed black;
+    width: 50%;
+    margin: auto auto;
+  }
+  .btn-success {
+    /*visibility: visible;*/
+  }
+  .col-md-4:last-child {
+    border-bottom: 0px dashed black;
+  }
+  .counter {
+    font-size: 23px;
+  }
+  .counter-col > h3.animated {
+    font-size: 20px;
+  }
+  .counter-col {
+    padding-bottom: 20px;
+  }
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+  -moz-transition: opacity 1.5s ease-in-out;
+  -webkit-transition: opacity 1.5s ease-in-out;
+  transform: translateY(0);
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+  transform: translateY(20%);
+}
+.mobile {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .col-md-4.m-tabs {
+    padding-top: 20px;
+  }
+  #search-label {
+    min-width: 0;
+  }
+  #myInputSearch {
+    width: 120px !important;
+  }
+  #search-label,
+  #myInputSearch {
+    font-size: 25px;
+  }
+  #text-changing {
+    font-size: 27px;
+    width: 104px;
+    min-width: unset;
+  }
+  .home-col {
+    display: block !important;
+  }
+  .mobile {
+    display: block !important;
+  }
+  .desktop {
+    display: none !important;
+  }
+  #findbtn {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+.dropdown-down {
+  background-color: #f3f3f3;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url("https://greenify.devepi.com/images/poster.jpg") black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
+
+.menu-div {
+  height: 66px;
+}
+
+.breadcrumbs {
+  margin-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.breadcrumbs-bar {
+  background-color: #dee2e6;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+.menubar,
+.bc-col {
+  padding: 0px !important;
+}
+#findbtn {
+  display: block;
+  visibility: visible;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+}
+#snap {
+  visibility: visible;
+}
+.recordbtn {
+  cursor: pointer;
+}
+.screen-behind {
+  width: 100%;
+  height: 480px;
+  background-color: black;
+}
+
+#loading {
+  display:none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  top: 0;
+  z-index: 999999999;
+  background-color: white;
+  opacity: 0.7;
+}
+#loading > * {
+  top: 50%;
+  position: absolute;
+}
+
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+[type="file"] + label {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: inherit;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+[type="file"] + label:hover {
+  background-color: #d3460d;
+}
+[type="file"] + label.btn-1 {
+  background-color: #f79159;
+  box-shadow: 0 6px #f57128;
+  transition: none;
+}
+[type="file"] + label.btn-1:hover {
+  box-shadow: 0 4px #f57128;
+  top: 2px;
+}
+[type="file"] + label.btn-2 {
+  background-color: #99c793;
+  border-radius: 50px;
+  overflow: hidden;
+}
+[type="file"] + label.btn-2::before {
+  color: #fff;
+  content: "\f382";
+  font-family: "Font Awesome 5 Pro";
+  font-size: 100%;
+  height: 100%;
+  right: 130%;
+  line-height: 3.3;
+  position: absolute;
+  top: 0px;
+  transition: all 0.3s;
+}
+[type="file"] + label.btn-2:hover {
+  background-color: #497f42;
+}
+[type="file"] + label.btn-2:hover::before {
+  right: 75%;
+}
+[type="file"] + label.btn-3 {
+  background-color: #ee6d9e;
+  border-radius: 0;
+  overflow: hidden;
+}
+[type="file"] + label.btn-3 span {
+  display: inline-block;
+  height: 100%;
+  transition: all 0.3s;
+  width: 100%;
+}
+[type="file"] + label.btn-3::before {
+  color: #fff;
+  content: "\f382";
+  font-family: "Font Awesome 5 Pro";
+  font-size: 130%;
+  height: 100%;
+  left: 0;
+  line-height: 2.6;
+  position: absolute;
+  top: -180%;
+  transition: all 0.3s;
+  width: 100%;
+}
+[type="file"] + label.btn-3:hover {
+  background-color: #ae144f;
+}
+[type="file"] + label.btn-3:hover span {
+  -webkit-transform: translateY(300%);
+  transform: translateY(300%);
+}
+[type="file"] + label.btn-3:hover::before {
+  top: 0;
+}
+
+.pt-c > p {
+  margin-top: 1rem;
+}
+
+#upload {
+  visibility: visible;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+body {
+  background: #ffffff;
+  color: #333;
+  font-weight: normal;
+  font-size: 1em;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus,
+keygen:focus,
+select:focus {
+  outline: none;
+}
+::-moz-placeholder {
+  color: #666;
+  font-weight: 300;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: #666;
+  font-weight: 300;
+}
+
+.section2 {
+  width: 1200px;
+  margin: 25px auto;
+}
+.section2 .col2 {
+  width: 48.71%;
+}
+.section2 .col2.first {
+  float: left;
+}
+.section2 .col2.last {
+  float: right;
+}
+.section2 .col2.column2 {
+  padding: 0 30px;
+}
+.section2 span.collig {
+  color: #a2a2a2;
+  margin-right: 10px;
+  display: inline-block;
+}
+.section2 .sec2addr {
+  display: block;
+  line-height: 26px;
+}
+.section2 .sec2addr p:first-child {
+  margin-bottom: 10px;
+}
+.section2 .sec2contactform input[type="text"],
+.section2 .sec2contactform input[type="email"],
+.section2 .sec2contactform textarea {
+  padding: 18px;
+  border: 0;
+  background: #ededed;
+  margin: 7px 0;
+}
+.section2 .sec2contactform textarea {
+  width: 100%;
+  display: block;
+  color: #666;
+  resize: none;
+}
+.section2 .sec2contactform input[type="submit"],
+.btn-success {
+  padding: 15px 40px;
+  color: #fff;
+  border: 0;
+  background: #09bd78;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 7px 0;
+  cursor: pointer;
+  border-radius: 0;
+}
+.section2 .sec2contactform input[type="submit"]:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+.section2 .sec2contactform h3 {
+  font-weight: normal;
+  margin: 20px 0;
+  margin-top: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 19px;
+  color: #09bd78;
+}
+
+/* @media querries */
+
+@media only screen and (max-width: 1266px) {
+  .section2 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  
+  .section2 .col2 {
+    width: 100%;
+    display: block;
+  }
+  .section2 .col2.first {
+    margin-bottom: 10px;
+  }
+  .section2 .col2.column2 {
+    padding: 0;
+  }
+  body .sec2map {
+    height: 250px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section2 .sec2addr {
+    font-size: 14px;
+  }
+  .section2 .sec2contactform h3 {
+    font-size: 16px;
+  }
+  .section2 .sec2contactform input[type="text"],
+  .section2 .sec2contactform input[type="email"],
+  .section2 .sec2contactform textarea {
+    padding: 10px;
+    margin: 3px 0;
+  }
+  .section2 .sec2contactform input[type="submit"] {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .section1 h1 {
+    font-size: 28px;
+  }
+}
+.sec2map {
+  overflow: hidden;
+  height: 550px;
+  width: 100%;
+}
